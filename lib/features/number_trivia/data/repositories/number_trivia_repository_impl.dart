@@ -3,7 +3,7 @@ import 'package:meta/meta.dart';
 
 import '../../../../common/error/exception.dart';
 import '../../../../common/error/failure.dart';
-import '../../../../common/platform/network_info.dart';
+import '../../../../common/network/network_info.dart';
 import '../../domain/entities/number_trivia.dart';
 import '../../domain/repositories/number_trivia_repository.dart';
 import '../datasources/number_trivia_local_data_source.dart';
