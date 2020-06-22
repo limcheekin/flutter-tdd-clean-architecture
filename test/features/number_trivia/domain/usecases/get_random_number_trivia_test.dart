@@ -1,6 +1,5 @@
 import 'package:dartz/dartz.dart';
 import 'package:mockito/mockito.dart';
-import 'package:tdd_clean_architecture/common/usecases/usecase.dart';
 import 'package:tdd_clean_architecture/features/number_trivia/domain/entities/number_trivia.dart';
 import 'package:tdd_clean_architecture/features/number_trivia/domain/repositories/number_trivia_repository.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -29,7 +28,7 @@ void main() {
 
       // execute
       // As random number doesn't require any parameters, we pass in NoParams.
-      final result = await usecase(NoParams());
+      final result = await usecase();
 
       // verify
       expect(result, Right(tNumberTrivia));
