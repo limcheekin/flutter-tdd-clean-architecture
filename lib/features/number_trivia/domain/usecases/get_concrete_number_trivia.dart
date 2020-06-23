@@ -22,10 +22,13 @@ class GetConcreteNumberTrivia extends UseCase<NumberTrivia, Params> {
 class Params extends Equatable {
   final int number;
 
-  Params({@required this.number}) : super([number]);
+  Params({@required this.number});
 
   @override
   String toString() {
     return "GetConcreteNumberTrivia params: $number";
   }
+
+  @override
+  List<Object> get props => [number];
 }
