@@ -50,18 +50,6 @@ void main() {
     void setUpMockInputConverterSuccess() =>
         when(mockInputConverter.stringToUnsignedInteger(any))
             .thenReturn(Right(tNumberParsed));
-    test(
-      'should call the InputConverter to validate and convert the string to an unsigned integer',
-      () async {
-        // arrange
-        setUpMockInputConverterSuccess();
-        // act
-        bloc.add(GetTriviaForConcreteNumber(tNumberString));
-        await untilCalled(mockInputConverter.stringToUnsignedInteger(any));
-        // assert
-        verify(mockInputConverter.stringToUnsignedInteger(tNumberString));
-      },
-    );
 
     blocTest(
       'should emit [Error] when the input is invalid',
